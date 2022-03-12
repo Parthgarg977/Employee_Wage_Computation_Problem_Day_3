@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
     internal class class1
     {
-        int Is_Full_Time = 1;
-        int Is_Part_Time = 2;
+        int Full_Time = 1;
+        int Part_Time = 2;
         int maxRateInMonth = 100;
         int Emp_Rate_Per_Hr = 20;
         int numOfWorkingDays = 20;
@@ -23,7 +23,7 @@ using System.Threading.Tasks;
     public void Employee()
         {
             int empCheck = obj.Next(0, 2);
-            if (empCheck == Is_Full_Time)
+            if (empCheck == Full_Time)
             {
                 Console.WriteLine("Employee is Present");
             }
@@ -36,15 +36,15 @@ using System.Threading.Tasks;
     public void EmpDailyWages()
         {
             int empCheck = obj.Next(0, 2);
-            if (empCheck == Is_Full_Time)
+            if (empCheck == Full_Time)
             {
                 empHrs = 8;
-                Console.WriteLine("He worked full day");
+                Console.WriteLine("Employee worked full day");
             }
             else
             {
                 empHrs = 0;
-                Console.WriteLine("He is Absent");
+                Console.WriteLine("Employee is Absent");
             }
             empWage = empHrs * Emp_Rate_Per_Hr;
             Console.WriteLine("Employee salary is= " + empWage);
@@ -53,20 +53,20 @@ using System.Threading.Tasks;
     public void EmpPartTime()
         {
             int randomCheck = obj.Next(0, 3);
-            if (randomCheck == Is_Full_Time)
+            if (randomCheck == Full_Time)
             {
                 empHrs = 8;
-                Console.WriteLine("He Worked Full Day");
+                Console.WriteLine("Employee Worked Full Day");
             }
-            else if (randomCheck == Is_Part_Time)
+            else if (randomCheck == Part_Time)
             {
                 empHrs = 4;
-                Console.WriteLine("He Worked Half Day");
+                Console.WriteLine("Employee Worked Half Day");
             }
             else
             {
                 empHrs = 0;
-                Console.WriteLine("He Is Absent");
+                Console.WriteLine("Employee Is Absent");
             }
                 empWage = empHrs * Emp_Rate_Per_Hr;
                 Console.WriteLine("His Salary is= " + empWage);
@@ -79,20 +79,20 @@ using System.Threading.Tasks;
             case 1:
 
                 empHrs = 8;
-                Console.WriteLine("He is working full day");
+                Console.WriteLine("Employee is working full day");
                 break;
 
             case 2:
 
                 empHrs = 4;
-                Console.WriteLine("He is working Half day");
+                Console.WriteLine("Employee is working Half day");
                 break;
 
             case 0:
 
 
                 empHrs = 0;
-                Console.WriteLine("He is absent");
+                Console.WriteLine("Employee is absent");
                 break;
 
             }
@@ -159,8 +159,8 @@ using System.Threading.Tasks;
 
 
         }
-        int totaSalary = (totalEmpHr * Emp_Rate_Per_Hr);
-        Console.WriteLine("Employee total salary is= "+totaSalary);
+        int total_Salary = (totalEmpHr * Emp_Rate_Per_Hr);
+        Console.WriteLine("Employee total salary is= "+total_Salary);
         Console.WriteLine("Employee total Hours Worked= "+totalEmpHr);
         Console.WriteLine("Employee total working Days is= "+totalWorkingDay);
     }
