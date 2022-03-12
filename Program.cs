@@ -8,6 +8,8 @@ namespace MyEmployee
         {
             class1 obj = new class1();
             obj.Employee();
+            obj.EmpDailyWages();
         }
     }
 }
+
